@@ -1,0 +1,56 @@
+.dropdown {
+  position: relative;
+  width: 40rem;
+  font-size: inherit;
+  cursor: pointer;
+  border: none;
+
+  &__label {
+    border: none;
+    background-color: #fffffe;
+    color: black;
+    padding: 1.96rem 1rem;
+    transition-duration: 0.3s;
+
+    &:hover {
+      background-color: #ff8906;
+    }
+  }
+
+  &__icon {
+    float: right;
+    transition: transform 0.3s;
+
+    &--rotate {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__menu {
+    cursor: pointer;
+    position: absolute;
+    background-color: #fffffe;
+    min-width: 40rem;
+    max-height: 30rem;
+    z-index: 1000;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease-out;
+
+    &--hide {
+      max-height: 0 !important;
+      overflow: hidden;
+    }
+  }
+
+  &__option {
+    cursor: pointer;
+    color: black;
+    margin: 0.5rem 0;
+    padding: 1rem;
+
+    &:hover {
+      background-color: #ff8906;
+    }
+  }
+}

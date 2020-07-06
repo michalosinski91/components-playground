@@ -1,0 +1,21 @@
+.navlist {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+
+  &__item {
+    cursor: pointer;
+    padding: 2rem;
+    text-transform: uppercase;
+
+    & a,
+    a:visited {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    &:hover {
+      background-color: #ff8906;
+    }
+  }
+}
