@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./NavList.scss";
 import NavListItem from "./NavListItem/NavListItem";
 
 export default function NavList() {
-  const [activeTab, setActiveTab] = useState("home");
+  let location = useLocation();
+  const [activeTab, setActiveTab] = useState(location.pathname);
+
   return (
     <div className="nav-container">
       <div className="navlist">
         <NavListItem
-          section={"Projects"}
+          label={"Projects"}
+          link={"/projects"}
           activeTab={activeTab}
           setActiveTab={setActiveTab}
         />
@@ -16,17 +20,20 @@ export default function NavList() {
 
       <div className="navlist">
         <NavListItem
-          section={"Home"}
+          label={"Home"}
+          link={"/"}
           activeTab={activeTab}
           setActiveTab={setActiveTab}
         />
         <NavListItem
-          section={"About Me"}
+          label={"About Me"}
+          link={"/aboutme"}
           activeTab={activeTab}
           setActiveTab={setActiveTab}
         />
         <NavListItem
-          section={"Code on GitHub"}
+          label={"Code on GitHub"}
+          link={null}
           source={"https://www.github.com/michalosinski91"}
           activeTab={null}
           setActiveTab={null}
