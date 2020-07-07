@@ -12,7 +12,7 @@ export default function NavListItem({
     <>
       {!source ? (
         <Link
-          to={`/${routeName}`}
+          to={routeName == "home" ? `/` : `/${routeName}`}
           className={
             activeTab && activeTab.toLowerCase() == routeName
               ? "navlist__item navlist__item--active"
