@@ -1,20 +1,25 @@
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .navlist {
   display: flex;
   flex-direction: row;
-  list-style: none;
 
   &__item {
     cursor: pointer;
-    padding: 2rem;
     text-transform: uppercase;
-
-    & a,
-    a:visited {
-      text-decoration: none;
-      color: inherit;
-    }
+    padding: 2rem 3rem;
+    text-decoration: none;
+    color: inherit;
 
     &:hover {
+      background-color: #ff8906;
+    }
+
+    &--active {
       background-color: #ff8906;
     }
   }

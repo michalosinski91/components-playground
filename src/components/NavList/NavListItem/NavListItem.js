@@ -1,17 +1,40 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function NavListItem({ section, source }) {
+export default function NavListItem({
+  section,
+  source,
+  activeTab,
+  setActiveTab,
+}) {
   const routeName = section.replace(" ", "").toLowerCase();
   return (
-    <li className="navlist__item">
+    <>
       {!source ? (
-        <Link to={`/${routeName}`}>{section}</Link>
+        <Link
+          to={`/${routeName}`}
+          className={
+            activeTab && activeTab.toLowerCase() == routeName
+              ? "navlist__item navlist__item--active"
+              : "navlist__item"
+          }
+          onClick={() => setActiveTab(routeName)}
+        >
+          {section}
+        </Link>
       ) : (
-        <a target="_blank" href={source}>
+        <a
+          target="_blank"
+          href={source}
+          className={
+            activeTab && activeTab.toLowerCase() == routeName
+              ? "navlist__item navlist__item--active"
+              : "navlist__item"
+          }
+        >
           {section}
         </a>
       )}
-    </li>
+    </>
   );
 }
