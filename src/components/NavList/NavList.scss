@@ -10,13 +10,19 @@
 
   &__item {
     cursor: pointer;
+    width: 20rem;
+    padding: 1rem;
+    text-align: center;
     text-transform: uppercase;
-    padding: 2rem 3rem;
     text-decoration: none;
     color: inherit;
 
     &:hover {
       background-color: #ff8906;
+    }
+
+    &:active {
+      background-color: #ff8b06a8;
     }
 
     &--active {

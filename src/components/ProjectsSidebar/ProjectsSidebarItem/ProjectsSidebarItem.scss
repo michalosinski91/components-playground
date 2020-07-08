@@ -1,0 +1,21 @@
+.projects-sidebar-item {
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #ff8906;
+  display: flex;
+  justify-content: space-between;
+
+  &:hover {
+    background-color: #ff8b06;
+  }
+
+  &:active {
+    background-color: #ff8b06a8;
+  }
+
+  &--active {
+    background-color: #ff8b06;
+  }
+}
