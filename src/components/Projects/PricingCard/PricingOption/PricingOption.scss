@@ -1,0 +1,67 @@
+.pricing-option {
+  padding: 2rem 4rem;
+  height: 30rem;
+  width: 27.5rem;
+  text-align: left;
+  &__header {
+    text-transform: capitalize;
+    font-size: 2.4rem;
+    margin-bottom: 1.75rem;
+  }
+
+  &__details {
+    margin-bottom: 3.25rem;
+    line-height: 2rem;
+
+    & h4 {
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+
+    & p {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__features-list {
+    margin-bottom: 3.25rem;
+    list-style-position: inside;
+  }
+
+  &__feature {
+    font-size: 1.2rem;
+    padding: 0.25rem 0;
+  }
+}
+
+.btn {
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 100%;
+  padding: 1.25rem 0;
+  border: 1px solid #aa2b33;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  &--no-fill {
+    color: #aa2b33;
+
+    &:hover {
+      background-color: #aa2b33;
+      color: #b2aaab;
+    }
+
+    &:active {
+      background-color: #6e1a20;
+    }
+  }
+
+  &--fill {
+    background-color: #aa2b33;
+    color: #b2aaab;
+
+    &:active {
+      background-color: #6e1a20;
+    }
+  }
+}

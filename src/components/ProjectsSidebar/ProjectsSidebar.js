@@ -3,13 +3,13 @@ import "./ProjectsSidebar.scss";
 import ProjectsSidebarItem from "./ProjectsSidebarItem/ProjectsSidebarItem";
 
 export default function ProjectsSidebar({
-  mockProjects,
+  projects,
   activeProject,
   setActiveProject,
 }) {
   return (
     <div className="projects-sidebar">
-      {mockProjects.map((project) => (
+      {projects.map((project) => (
         <ProjectsSidebarItem
           key={project}
           label={project}
