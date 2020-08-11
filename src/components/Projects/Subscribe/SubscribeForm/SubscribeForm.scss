@@ -1,0 +1,62 @@
+.subscribe-form {
+  padding: 4rem 0;
+  &__input {
+    font-size: 1.4rem;
+    color: #303035;
+    padding: 1.8rem 2rem;
+    width: 30rem;
+    border: 1px solid #b4b4ba;
+
+    &::placeholder {
+      color: #7c7c84;
+    }
+  }
+
+  &__button {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    padding: 1.8rem 5rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline-style: none;
+
+    &--submit {
+      color: #f3f3fb;
+      background-color: #3983ce;
+      box-shadow: 0 7.5px 15px -3px #3983ce;
+
+      &:hover {
+        background-color: #316eaa;
+      }
+
+      &:active {
+        background-color: #255483;
+        transform: translateY(2.5px);
+        box-shadow: 0 5px 5px -3px #255483;
+      }
+    }
+
+    & i {
+      margin-left: 5px;
+      vertical-align: -15%;
+    }
+  }
+
+  &__checkbox-container {
+    margin-top: 2rem;
+    width: 50%;
+    display: flex;
+  }
+
+  &__checkbox {
+    border: 1px solid #b4b4ba;
+  }
+
+  &__checkbox-label {
+    font-size: 1.1rem;
+    margin-left: 7.5px;
+    color: #303035;
+  }
+}

@@ -3,10 +3,12 @@ import "./ProjectsCanvas.scss";
 
 import Placeholder from "../Projects/Placeholder/Placeholder";
 import TestComp from "../Projects/TestComp/TestComp";
+import Subscribe from "../Projects/Subscribe/Subscribe";
 
 export default function ProjectsCanvas({ activeProject }) {
   const components = {
     TestComp: TestComp,
+    Subscribe: Subscribe,
   };
 
   function Comp(name) {

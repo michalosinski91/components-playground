@@ -6,7 +6,7 @@ import ProjectsCanvas from "../../components/ProjectsCanvas/ProjectsCanvas";
 export default function Projects() {
   const mockProjects = [
     "TestComp",
-    "item2",
+    "Subscribe",
     "item3",
     "item4",
     "item5",
