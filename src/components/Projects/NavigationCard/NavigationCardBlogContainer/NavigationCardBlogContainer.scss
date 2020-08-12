@@ -1,0 +1,25 @@
+.nav-card-blog {
+  border: 1px solid #a7a8b16e;
+  border-radius: 1rem;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  width: 27.5rem;
+  height: 100%;
+
+  &__header {
+    font-size: 1.8rem;
+    padding: 1rem;
+  }
+
+  &__subcontainer {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+
+    & div {
+      &:not(:last-of-type) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}

@@ -2,14 +2,15 @@ import React from "react";
 import "./ProjectsCanvas.scss";
 
 import Placeholder from "../Projects/Placeholder/Placeholder";
-import TestComp from "../Projects/TestComp/TestComp";
 import Subscribe from "../Projects/Subscribe/Subscribe";
 import PricingCard from "../Projects/PricingCard/PricingCard";
+import NavigationCard from "../Projects/NavigationCard/NavigationCard";
 
 export default function ProjectsCanvas({ activeProject }) {
   const components = {
     Subscribe: Subscribe,
     PricingCard: PricingCard,
+    NavigationCard: NavigationCard,
   };
 
   function Comp(name) {

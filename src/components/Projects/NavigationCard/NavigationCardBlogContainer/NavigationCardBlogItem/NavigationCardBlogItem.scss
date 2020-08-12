@@ -1,0 +1,25 @@
+.nav-card-blog-item {
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  background-color: #e4ebeb;
+
+  &__title {
+    font-size: 1.3rem;
+    padding: 0.5rem 0;
+  }
+
+  &__author {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #dda80f;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: #dda80f;
+
+    .nav-card-blog-item__author {
+      color: #fff;
+    }
+  }
+}

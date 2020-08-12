@@ -1,0 +1,56 @@
+.nav-item {
+  padding: 2rem 1.5rem;
+  width: 25rem;
+  border-radius: 1rem;
+
+  &--active {
+    background-color: #dda80f;
+
+    .nav-item__icon-container {
+      background-color: #fff;
+
+      & i {
+        color: #2e2f35;
+      }
+    }
+  }
+
+  &__icon-container {
+    width: 5rem;
+    height: 5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+    background-color: #dda80f;
+
+    & i {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #e4ebeb;
+    }
+  }
+
+  &__heading {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__text {
+    font-size: 1.2rem;
+  }
+
+  &:hover {
+    background-color: #dda80f;
+    cursor: pointer;
+
+    .nav-item__icon-container {
+      background-color: #fff;
+
+      & i {
+        color: #2e2f35;
+      }
+    }
+  }
+}
