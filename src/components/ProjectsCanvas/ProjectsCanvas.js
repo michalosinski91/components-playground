@@ -5,12 +5,14 @@ import Placeholder from "../Projects/Placeholder/Placeholder";
 import Subscribe from "../Projects/Subscribe/Subscribe";
 import PricingCard from "../Projects/PricingCard/PricingCard";
 import NavigationCard from "../Projects/NavigationCard/NavigationCard";
+import LoginCard from "../Projects/LoginCard/LoginCard";
 
 export default function ProjectsCanvas({ activeProject }) {
   const components = {
     Subscribe: Subscribe,
     PricingCard: PricingCard,
     NavigationCard: NavigationCard,
+    LoginCard: LoginCard,
   };
 
   function Comp(name) {

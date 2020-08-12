@@ -4,8 +4,8 @@ import ProjectsSidebar from "../../components/ProjectsSidebar/ProjectsSidebar";
 import ProjectsCanvas from "../../components/ProjectsCanvas/ProjectsCanvas";
 
 export default function Projects() {
-  const projects = ["Subscribe", "PricingCard", "NavigationCard"];
-  const [activeProject, setActiveProject] = useState("NavigationCard");
+  const projects = ["Subscribe", "PricingCard", "NavigationCard", "LoginCard"];
+  const [activeProject, setActiveProject] = useState("LoginCard");
   return (
     <div className="projects">
       <ProjectsSidebar
