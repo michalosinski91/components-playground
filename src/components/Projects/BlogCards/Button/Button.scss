@@ -1,0 +1,27 @@
+.btn {
+  width: 75%;
+  height: 100%;
+  padding: 1rem;
+  margin: 0.75rem 0;
+  border: 1px solid #596361;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #596361;
+  font-size: 1.2rem;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.25);
+
+  &:hover {
+    background-color: #596361;
+    color: #fff;
+  }
+
+  &--dark {
+    background-color: #596361;
+    color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: #596361;
+    }
+  }
+}

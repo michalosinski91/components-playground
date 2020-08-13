@@ -1,0 +1,15 @@
+.premium-acc-comp {
+  display: flex;
+  flex-direction: column;
+
+  &__subcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    & button {
+      width: 50%;
+    }
+  }
+}

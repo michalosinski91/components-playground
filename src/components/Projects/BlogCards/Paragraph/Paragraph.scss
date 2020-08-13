@@ -1,0 +1,8 @@
+.paragraph {
+  margin: 1rem 0;
+  & p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #596361;
+  }
+}

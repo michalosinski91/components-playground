@@ -1,0 +1,13 @@
+.blog-cards {
+  display: flex;
+  flex-direction: row;
+
+  background-color: #596361;
+  padding: 5rem;
+
+  &__subcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
