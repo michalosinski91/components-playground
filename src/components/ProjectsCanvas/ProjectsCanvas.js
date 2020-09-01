@@ -26,9 +26,7 @@ export default function ProjectsCanvas({ activeProject }) {
 
   return (
     <div className="canvas">
-      <div className="canvas-container">
-        {!activeProject ? <Placeholder /> : Comp(activeProject)}
-      </div>
+      {!activeProject ? <Placeholder /> : Comp(activeProject)}
     </div>
   );
 }

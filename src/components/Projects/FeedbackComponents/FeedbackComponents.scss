@@ -2,9 +2,12 @@
   background-color: #f7f9fd;
   padding: 5rem;
   margin: 2rem;
+  height: 100%;
+  max-width: 1200px;
 
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
 }

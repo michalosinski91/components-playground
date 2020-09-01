@@ -1,9 +1,16 @@
 .blog-cards {
+  background-color: #596361;
+  padding: 5rem;
+  max-width: 80rem;
+  height: 64rem;
+  overflow: scroll;
+
   display: flex;
   flex-direction: row;
 
-  background-color: #596361;
-  padding: 5rem;
+  @media (max-width: 1080px) {
+    flex-direction: column;
+  }
 
   &__subcontainer {
     display: flex;

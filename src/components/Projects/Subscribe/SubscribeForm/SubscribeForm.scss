@@ -1,5 +1,6 @@
 .subscribe-form {
   padding: 4rem 0;
+
   &__input {
     font-size: 1.4rem;
     color: #303035;
@@ -58,5 +59,19 @@
     font-size: 1.1rem;
     margin-left: 7.5px;
     color: #303035;
+  }
+
+  @media (max-width: 920px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__button {
+      margin: 2rem 0 0 0;
+    }
+
+    &__checkbox-container {
+      width: 30rem;
+    }
   }
 }
