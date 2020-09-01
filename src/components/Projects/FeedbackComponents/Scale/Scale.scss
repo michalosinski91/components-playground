@@ -1,0 +1,14 @@
+.feedback-scale {
+  margin: 3rem 0;
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__legend {
+    font-size: 1.2rem;
+    color: #5d698d;
+    margin: 0 0.5rem;
+  }
+}

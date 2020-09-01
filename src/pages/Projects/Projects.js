@@ -10,8 +10,9 @@ export default function Projects() {
     "NavigationCard",
     "LoginCard",
     "BlogCards",
+    "FeedbackComponents",
   ];
-  const [activeProject, setActiveProject] = useState("BlogCards");
+  const [activeProject, setActiveProject] = useState("FeedbackComponents");
   return (
     <div className="projects">
       <ProjectsSidebar
