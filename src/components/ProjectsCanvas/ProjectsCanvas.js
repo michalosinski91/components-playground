@@ -8,6 +8,7 @@ import NavigationCard from "../Projects/NavigationCard/NavigationCard";
 import LoginCard from "../Projects/LoginCard/LoginCard";
 import BlogCards from "../Projects/BlogCards/BlogCards";
 import FeedbackComponents from "../Projects/FeedbackComponents/FeedbackComponents";
+import ShopComponents from "../Projects/ShopComponents/ShopComponents";
 
 export default function ProjectsCanvas({ activeProject }) {
   const components = {
@@ -17,6 +18,7 @@ export default function ProjectsCanvas({ activeProject }) {
     LoginCard: LoginCard,
     BlogCards: BlogCards,
     FeedbackComponents: FeedbackComponents,
+    ShopComponents: ShopComponents,
   };
 
   function Comp(name) {

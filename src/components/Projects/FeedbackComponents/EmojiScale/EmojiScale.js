@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./EmojiScale.scss";
 import EmojiScaleItem from "./EmojiScaleItem/EmojiScaleItem";
 
-import SadEmoji from "../../../..//assets/images/emojis/sad.png";
+import SadEmoji from "../../../../assets/images/emojis/sad.png";
 import NeutralEmoji from "../../../../assets/images/emojis/indifferent.png";
 import HappyEmoji from "../../../../assets/images/emojis/happy.png";
 

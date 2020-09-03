@@ -42,7 +42,7 @@ export default function LoginCardForm() {
 
         <a href="#">Forgot Password</a>
       </div>
-      <button class="login-form__btn">Log In</button>
+      <button className="login-form__btn">Log In</button>
       <small>
         Don't have an account? <a href="#">Sign up</a>
       </small>
