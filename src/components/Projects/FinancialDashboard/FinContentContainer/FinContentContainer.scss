@@ -1,0 +1,14 @@
+.fin-content-container {
+  background-color: #fff;
+  width: 360px;
+  height: 360px;
+  margin: 0.5rem;
+
+  @media (max-width: 1200px) {
+    width: 540px;
+  }
+
+  &--wide {
+    width: 540px;
+  }
+}

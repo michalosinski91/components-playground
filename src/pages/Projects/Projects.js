@@ -12,8 +12,9 @@ export default function Projects() {
     "BlogCards",
     "FeedbackComponents",
     "ShopComponents",
+    "FinancialDashboard",
   ];
-  const [activeProject, setActiveProject] = useState("ShopComponents");
+  const [activeProject, setActiveProject] = useState("FinancialDashboard");
   return (
     <div className="projects">
       <ProjectsSidebar

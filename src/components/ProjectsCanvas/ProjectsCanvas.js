@@ -9,6 +9,7 @@ import LoginCard from "../Projects/LoginCard/LoginCard";
 import BlogCards from "../Projects/BlogCards/BlogCards";
 import FeedbackComponents from "../Projects/FeedbackComponents/FeedbackComponents";
 import ShopComponents from "../Projects/ShopComponents/ShopComponents";
+import FinancialDashboard from "../Projects/FinancialDashboard/FinancialDashboard";
 
 export default function ProjectsCanvas({ activeProject }) {
   const components = {
@@ -19,6 +20,7 @@ export default function ProjectsCanvas({ activeProject }) {
     BlogCards: BlogCards,
     FeedbackComponents: FeedbackComponents,
     ShopComponents: ShopComponents,
+    FinancialDashboard: FinancialDashboard,
   };
 
   function Comp(name) {

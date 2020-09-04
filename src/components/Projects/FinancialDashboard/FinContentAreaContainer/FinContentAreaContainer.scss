@@ -1,0 +1,19 @@
+.fin-content-area-container {
+  grid-area: content;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+
+  &__main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 1200px) {
+    &__main {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+  }
+}
