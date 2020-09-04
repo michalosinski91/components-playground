@@ -1,4 +1,8 @@
 .fin-side-bar {
   background-color: #4c8deb;
   grid-area: sidebar;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

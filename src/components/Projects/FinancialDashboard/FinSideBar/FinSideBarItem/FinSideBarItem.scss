@@ -1,0 +1,24 @@
+.fin-sidebar-item {
+  width: 45px;
+  height: 45px;
+  margin: 1rem 0;
+
+  border-radius: 10px;
+
+  position: relative;
+
+  &:hover {
+    background-color: #2351bc8f;
+  }
+
+  &--active {
+    background-color: #2350bc;
+  }
+  & i {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
