@@ -1,0 +1,36 @@
+.fin-table {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+
+  & h3 {
+    font-size: 2rem;
+    color: #405169;
+    font-weight: 400;
+    margin: 2rem 0;
+  }
+
+  &__table {
+    height: 100%;
+    border-collapse: collapse;
+  }
+
+  &__row {
+    height: 5rem;
+    font-size: 1.2rem;
+    color: #405169;
+
+    & td {
+      min-width: 2rem;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 2px solid #dde9fb;
+    }
+
+    &:hover {
+      background-color: #dde9fb;
+      cursor: pointer;
+    }
+  }
+}

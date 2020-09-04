@@ -10,7 +10,7 @@ export default function FinContentContainer(props) {
           : "fin-content-container"
       }
     >
-      ContentContainer
+      {props.children}
     </div>
   );
 }
