@@ -10,6 +10,11 @@
   padding: 1.5rem;
   height: 100%;
 
+  @media (min-width: 1418px) {
+    overflow: scroll;
+    max-height: 730px;
+  }
+
   & h3 {
     font-size: 2rem;
     color: #405169;
