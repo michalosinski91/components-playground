@@ -128,6 +128,90 @@ export default function FinContentAreaContainer() {
     },
   ];
 
+  const activity = [
+    {
+      id: 1,
+      timestamp: 1581422580000,
+      type: "is",
+      action: "Invoice Sent",
+      invoiceId: "0076",
+      amount: 1300,
+      email: "email@address.com",
+    },
+    {
+      id: 2,
+      timestamp: 1581172860000,
+      type: "is",
+      action: "Invoice Sent",
+      invoiceId: "0075",
+      amount: 2000,
+      email: "email@address.com",
+    },
+    {
+      id: 3,
+      timestamp: 1578754620000,
+      type: "pr",
+      action: "Payment Received",
+      invoiceId: "0072",
+      amount: 1300,
+      email: "email@address.com",
+    },
+    {
+      id: 4,
+      timestamp: 1578131340000,
+      type: "ig",
+      action: "Invoice Generated",
+      invoiceId: "0076",
+      amount: 1300,
+      email: "email@address.com",
+    },
+    {
+      id: 5,
+      timestamp: 1575993247000,
+      type: "pr",
+      action: "Payment Received",
+      invoiceId: "0070",
+      amount: 1000,
+      email: "email@address.com",
+    },
+    {
+      id: 6,
+      timestamp: 1573481160000,
+      type: "ig",
+      action: "Invoice Generated",
+      invoiceId: "0075",
+      amount: 2000,
+      email: "email@address.com",
+    },
+    {
+      id: 7,
+      timestamp: 1573122180000,
+      type: "is",
+      action: "Invoice Sent",
+      invoiceId: "0071",
+      amount: 2500,
+      email: "email@address.com",
+    },
+    {
+      id: 8,
+      timestamp: 1572876660000,
+      type: "ig",
+      action: "Invoice Generated",
+      invoiceId: "0071",
+      amount: 2500,
+      email: "email@address.com",
+    },
+    {
+      id: 9,
+      timestamp: 1572777660000,
+      type: "pr",
+      action: "Payment Received",
+      invoiceId: "0065",
+      amount: 1700,
+      email: "email@address.com",
+    },
+  ];
+
   return (
     <div className="fin-content-area-container">
       <div className="fin-content-area-container__main">
@@ -144,7 +228,7 @@ export default function FinContentAreaContainer() {
           <FinTable title={TopSelling.title} data={TopSelling.data} />
         </FinContentContainer>
       </div>
-      <FinActivityComponent />
+      <FinActivityComponent title="Activity" data={activity} />
     </div>
   );
 }

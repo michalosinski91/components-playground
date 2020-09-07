@@ -1,0 +1,18 @@
+.fin-activity-text {
+  color: #405169;
+  font-size: 1rem;
+
+  & strong {
+    font-weight: 800;
+  }
+
+  & a,
+  :link,
+  :visited,
+  :hover,
+  :active {
+    cursor: pointer;
+    color: #4c8deb;
+    text-decoration: none;
+  }
+}
