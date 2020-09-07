@@ -101,6 +101,33 @@ export default function FinContentAreaContainer() {
     },
   ];
 
+  const payments = [
+    {
+      month: "Oct",
+      value: 210000,
+    },
+    {
+      month: "Nov",
+      value: 140000,
+    },
+    {
+      month: "Dec",
+      value: 225000,
+    },
+    {
+      month: "Jan",
+      value: 230000,
+    },
+    {
+      month: "Feb",
+      value: 148000,
+    },
+    {
+      month: "Mar",
+      value: 112500,
+    },
+  ];
+
   return (
     <div className="fin-content-area-container">
       <div className="fin-content-area-container__main">
@@ -108,7 +135,7 @@ export default function FinContentAreaContainer() {
           <FinPieChart title="Invoices" data={invoices} />
         </FinContentContainer>
         <FinContentContainer wide={true}>
-          <FinBarChart />
+          <FinBarChart title="Payments" data={payments} />
         </FinContentContainer>
         <FinContentContainer>
           <FinTable title={TopCustomers.title} data={TopCustomers.data} />
