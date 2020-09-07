@@ -1,0 +1,75 @@
+.fin-pie-chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  height: 100%;
+
+  & h3 {
+    font-size: 2rem;
+    color: #405169;
+    font-weight: 400;
+    padding: 0.5rem 0;
+  }
+
+  &__chart {
+    height: 200px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__chart-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__chart-details-primary {
+    color: #405169;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  &__chart-details-secondary {
+    color: #a0bce4;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+
+  &__legend {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  &__legend-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    margin: 0 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      & .fin-pie-chart__legend-item-text {
+        color: #000;
+      }
+    }
+  }
+
+  &__legend-item-colour {
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 2.5px;
+    margin-right: 0.5rem;
+  }
+
+  &__legend-item-text {
+    font-size: 1.2rem;
+    color: #405169;
+  }
+}
