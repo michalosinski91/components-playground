@@ -10,6 +10,7 @@ import BlogCards from "../Projects/BlogCards/BlogCards";
 import FeedbackComponents from "../Projects/FeedbackComponents/FeedbackComponents";
 import ShopComponents from "../Projects/ShopComponents/ShopComponents";
 import FinancialDashboard from "../Projects/FinancialDashboard/FinancialDashboard";
+import FAQAccordion from "../Projects/FAQAccordion/FAQAccordion";
 
 export default function ProjectsCanvas({ activeProject }) {
   const components = {
@@ -21,6 +22,7 @@ export default function ProjectsCanvas({ activeProject }) {
     FeedbackComponents: FeedbackComponents,
     ShopComponents: ShopComponents,
     FinancialDashboard: FinancialDashboard,
+    FAQAccordion: FAQAccordion,
   };
 
   function Comp(name) {

@@ -13,8 +13,9 @@ export default function Projects() {
     "FeedbackComponents",
     "ShopComponents",
     "FinancialDashboard",
+    "FAQAccordion",
   ];
-  const [activeProject, setActiveProject] = useState("FinancialDashboard");
+  const [activeProject, setActiveProject] = useState("FAQAccordion");
   return (
     <div className="projects">
       <ProjectsSidebar
