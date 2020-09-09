@@ -1,7 +1,7 @@
 import React from "react";
 import "./ProjectsCanvas.scss";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import Placeholder from "../Projects/Placeholder/Placeholder";
 import Subscribe from "../Projects/Subscribe/Subscribe";
@@ -13,6 +13,7 @@ import FeedbackComponents from "../Projects/FeedbackComponents/FeedbackComponent
 import ShopComponents from "../Projects/ShopComponents/ShopComponents";
 import FinancialDashboard from "../Projects/FinancialDashboard/FinancialDashboard";
 import FAQAccordion from "../Projects/FAQAccordion/FAQAccordion";
+import CVBuilder from "../Projects/CVBuilder/CVBuilder";
 
 export default function ProjectsCanvas({ activeProject }) {
   const components = {
@@ -25,6 +26,7 @@ export default function ProjectsCanvas({ activeProject }) {
     ShopComponents: ShopComponents,
     FinancialDashboard: FinancialDashboard,
     FAQAccordion: FAQAccordion,
+    CVBuilder: CVBuilder,
   };
 
   function Comp(name) {

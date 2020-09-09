@@ -15,8 +15,9 @@ export default function Projects() {
     "ShopComponents",
     "FinancialDashboard",
     "FAQAccordion",
+    "CVBuilder",
   ];
-  const [activeProject, setActiveProject] = useState(null);
+  const [activeProject, setActiveProject] = useState("CVBuilder");
   return (
     <div className="projects" key="projects">
       <ProjectsSidebar

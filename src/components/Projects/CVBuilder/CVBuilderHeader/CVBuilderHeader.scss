@@ -1,0 +1,14 @@
+.cv-builder-header {
+  display: flex;
+  flex-direction: column;
+
+  & h2 {
+    width: 60%;
+    font-size: 2rem;
+  }
+
+  & p {
+    font-size: 1.4rem;
+    padding: 1rem 0;
+  }
+}

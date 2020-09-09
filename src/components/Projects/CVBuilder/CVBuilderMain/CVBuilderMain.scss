@@ -1,0 +1,11 @@
+.cv-builder-main {
+  background-color: #fdfdfc5d;
+  width: 700px;
+  padding: 5rem;
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
