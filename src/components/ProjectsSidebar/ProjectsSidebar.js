@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./ProjectsSidebar.scss";
+
+import { motion } from "framer-motion";
+
 import ProjectsSidebarItem from "./ProjectsSidebarItem/ProjectsSidebarItem";
 
 export default function ProjectsSidebar({
@@ -10,7 +13,11 @@ export default function ProjectsSidebar({
   const [closeSidebar, setCloseSidebar] = useState(false);
 
   return (
-    <div
+    <motion.div
+      initial={{ translateX: -200 }}
+      animate={{ translateX: 0 }}
+      exit={{ translateX: -200, transition: { delay: 0.25, duration: 1 } }}
+      transition={{ duration: 1 }}
       className={
         closeSidebar
           ? "projects-sidebar projects-sidebar--close"
@@ -35,7 +42,10 @@ export default function ProjectsSidebar({
           />
         ))}
       </div>
-      <div
+      <motion.div
+        initial={{ translateX: -30 }}
+        animate={{ translateX: 0, transition: { delay: 0.75, duration: 0.5 } }}
+        exit={{ translateX: -30, transition: { duration: 0.5 } }}
         className="projects-sidebar__toggle"
         onClick={() => setCloseSidebar(!closeSidebar)}
       >
@@ -46,7 +56,7 @@ export default function ProjectsSidebar({
               : "fas fa-angle-double-left fa-2x"
           }
         ></i>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
