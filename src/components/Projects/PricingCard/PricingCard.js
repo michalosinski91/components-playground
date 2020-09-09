@@ -1,6 +1,8 @@
 import React from "react";
 import "./PricingCard.scss";
 
+import ProjectChangeAnimation from "../../ProjectChangeAnimation/ProjectChangeAnimation";
+
 import PricingOption from "./PricingOption/PricingOption";
 
 export default function PricingCard() {
@@ -31,10 +33,12 @@ export default function PricingCard() {
   };
 
   return (
-    <div className="pricing-card-container">
-      <PricingOption option={basicOption} />
-      <div className="divider">{null}</div>
-      <PricingOption option={proOption} />
-    </div>
+    <ProjectChangeAnimation>
+      <div className="pricing-card-container">
+        <PricingOption option={basicOption} />
+        <div className="divider">{null}</div>
+        <PricingOption option={proOption} />
+      </div>
+    </ProjectChangeAnimation>
   );
 }
