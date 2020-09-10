@@ -1,0 +1,6 @@
+.cv-progress-bar {
+  &__circle {
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
+}

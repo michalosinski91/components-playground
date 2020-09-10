@@ -1,0 +1,44 @@
+.cv-progress-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+
+  &__stage {
+    background-color: #ad927b;
+    color: #fff;
+    border-radius: 50%;
+    height: 2.25rem;
+    width: 2.25rem;
+    position: relative;
+
+    & > p {
+      font-size: 1.2rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--active {
+      background-color: #f39d1c;
+    }
+
+    &--completed {
+      background-color: #20cf15;
+    }
+  }
+
+  &__name {
+    font-size: 1.1rem;
+    color: #ad927b;
+
+    &--active {
+      color: #f39d1c;
+    }
+
+    &--completed {
+      color: #20cf15;
+    }
+  }
+}

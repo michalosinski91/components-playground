@@ -5,16 +5,26 @@ export default function CVBuilderBtn({
   type,
   activeSection,
   setActiveSection,
+  progress,
+  setProgress,
+  section,
+  prevActiveSection,
+  sections,
 }) {
   function nextSection(id) {
-    if (id < 4) {
+    if (id < sections.length) {
+      setProgress(progress + section.value);
       setActiveSection(id + 1);
     }
   }
 
   function prevSection(id) {
     if (id > 1) {
-      setActiveSection(id - 1);
+      const prevSectionVal = sections.filter(
+        (section) => section.id == prevActiveSection
+      )[0].value;
+      setProgress(progress - prevSectionVal);
+      setActiveSection(activeSection - 1);
     }
   }
 

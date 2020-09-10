@@ -1,0 +1,17 @@
+.cv-progress-bar-container {
+  height: 150px;
+  width: 150px;
+  margin: 2rem 0;
+
+  position: relative;
+
+  &__countup {
+    font-size: 2.6rem;
+    font-weight: 700;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

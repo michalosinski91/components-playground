@@ -1,5 +1,29 @@
 .cv-builder-aside {
   background-color: #fdfdfc;
   width: 300px;
-  padding: 3rem;
+  padding: 2rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h3 {
+    margin-top: 5rem;
+  }
+
+  &__section-details {
+    text-align: center;
+    & h4 {
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+    & p {
+      font-size: 1rem;
+      & > span {
+        color: #20cf15;
+        font-weight: 700;
+      }
+    }
+  }
 }

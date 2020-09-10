@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./CVBuilder.scss";
 
 import CVBuilderMain from "./CVBuilderMain/CVBuilderMain";
@@ -6,37 +6,54 @@ import CVBuilderAside from "./CVBuilderAside/CVBuilderAside";
 
 export default function CVBuilder() {
   const [activeSection, setActiveSection] = useState(1);
+  const [progress, setProgress] = useState(0);
+
+  const prevActiveSectionRef = useRef();
+
+  useEffect(() => {
+    prevActiveSectionRef.current = activeSection;
+  });
+
+  const prevActiveSection = prevActiveSectionRef.current;
 
   const sections = [
     {
       id: 1,
+      name: "Personal Information",
+      shortName: "Information",
       titlePrimary: "What's the best way for employers to contact you?",
       titleSecondary: "We suggest including an email and a phone number",
-      progress: 35,
+      value: 35,
       component: "CVContactForm",
     },
     {
       id: 2,
+      name: "Skills and strenghts",
+      shortName: "Skills",
       titlePrimary: "Select your top three strengths",
       titleSecondary:
         "Showing how you're unique helps you stand out from the competition",
-      progress: 15,
+      value: 15,
       component: "CVStrengths",
     },
     {
       id: 3,
+      name: "Work experience",
+      shortName: "Experience",
       titlePrimary: "How long have you been working?",
       titleSecondary:
         "Include relevant internships, volunteer work, and unpaid jobs",
-      progress: 30,
+      value: 30,
       component: "CVWorkExp",
     },
     {
       id: 4,
+      name: "Work gap",
+      shortName: "Gap",
       titlePrimary: "Why did you stop working?",
       titleSecondary:
         "Choose from the following several reasons why you might have stpped working",
-      progress: 20,
+      value: 20,
       component: "CVWorkGap",
     },
   ];
@@ -53,10 +70,17 @@ export default function CVBuilder() {
           activeSection={activeSection}
           setActiveSection={setActiveSection}
           section={getActiveSection(activeSection)}
+          progress={progress}
+          setProgress={setProgress}
+          prevActiveSection={prevActiveSection}
+          sections={sections}
         />
         <CVBuilderAside
+          sections={sections}
+          section={getActiveSection(activeSection)}
+          progress={progress}
           activeSection={activeSection}
-          setActiveSection={setActiveSection}
+          prevActiveSection={prevActiveSection}
         />
       </div>
     </div>
