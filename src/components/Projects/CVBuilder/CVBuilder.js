@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./CVBuilder.scss";
 
+import { connect } from "react-redux";
+
 import CVBuilderMain from "./CVBuilderMain/CVBuilderMain";
 import CVBuilderAside from "./CVBuilderAside/CVBuilderAside";
 
-export default function CVBuilder() {
+export function CVBuilder({ contactDetails }) {
   const [activeSection, setActiveSection] = useState(1);
   const [progress, setProgress] = useState(0);
 
@@ -74,6 +76,7 @@ export default function CVBuilder() {
           setProgress={setProgress}
           prevActiveSection={prevActiveSection}
           sections={sections}
+          contactDetails={contactDetails}
         />
         <CVBuilderAside
           sections={sections}
@@ -86,3 +89,13 @@ export default function CVBuilder() {
     </div>
   );
 }
+
+const mapStateToProps = (state) => {
+  return {
+    contactDetails: state.contactDetails,
+  };
+};
+
+const mapDispatchToProps = {};
+
+export default connect(mapStateToProps, mapDispatchToProps)(CVBuilder);

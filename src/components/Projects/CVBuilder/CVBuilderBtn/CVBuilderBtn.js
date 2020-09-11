@@ -30,14 +30,14 @@ export default function CVBuilderBtn({
     <>
       {type == "continue" ? (
         <button
-          className="cv-builer-button__continue"
+          className="cv-builer-button cv-builer-button--fill"
           onClick={() => nextSection(activeSection)}
         >
           Continue <i className="fas fa-long-arrow-alt-right"></i>
         </button>
       ) : (
         <button
-          className="cv-builder-button__back"
+          className="cv-builer-button cv-builer-button--nofill"
           onClick={() => prevSection(activeSection)}
         >
           <i className="fas fa-long-arrow-alt-left"></i> Back

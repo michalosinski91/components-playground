@@ -13,12 +13,12 @@ export default function CVBuilderMain({
   setProgress,
   prevActiveSection,
   sections,
-  prevProgress,
+  contactDetails,
 }) {
   return (
     <div className="cv-builder-main">
       <CVBuilderHeader section={section} />
-      <CVBuilderContent section={section} />
+      <CVBuilderContent section={section} contactDetails={contactDetails} />
       <div className="cv-builder-main__nav">
         <CVBuilderBtn
           type="back"
