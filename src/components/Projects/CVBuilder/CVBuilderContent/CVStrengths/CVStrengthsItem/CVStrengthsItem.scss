@@ -1,0 +1,58 @@
+.cv-strengths-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  margin: 0.75rem 1.5rem 0.75rem 0;
+  border: 2px solid rgb(135, 135, 135);
+  border-radius: 15px;
+  cursor: pointer;
+
+  &__icon-container {
+    border: 1.5px solid rgb(135, 135, 135);
+    border-radius: 50%;
+    padding: 0.25rem;
+    height: 1.8rem;
+    width: 1.8rem;
+    position: relative;
+    background-color: #fff;
+
+    & > i {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+    }
+  }
+
+  & > p {
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 1rem;
+  }
+
+  &:hover {
+    border-color: #f39d1c;
+  }
+
+  &--active {
+    border-color: #f39d1c;
+
+    & > .cv-strengths-item__icon-container {
+      border-color: #f39d1c;
+      background-color: #f39d1c;
+
+      & > i {
+        color: #fff;
+      }
+    }
+
+    & > p {
+      color: #f39d1c;
+    }
+  }
+}
