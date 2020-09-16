@@ -3,7 +3,7 @@ import "./CVWorkGap.scss";
 import CVWorkGapItem from "./CVWorkGapItem/CVWorkGapItem";
 
 export default function CVWorkGap() {
-  const [selectedReasons, setSelectedReasons] = useState(["Sabbatical"]);
+  const [selectedReasons, setSelectedReasons] = useState([]);
 
   const reasons = [
     "Education",

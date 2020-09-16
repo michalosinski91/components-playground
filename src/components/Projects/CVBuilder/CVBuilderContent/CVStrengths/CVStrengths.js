@@ -3,7 +3,7 @@ import "./CVStrengths.scss";
 import CVStrengthsItem from "./CVStrengthsItem/CVStrengthsItem";
 
 export default function CVStrengths() {
-  const [selectedStrengths, setSelectedStrengths] = useState(["Communication"]);
+  const [selectedStrengths, setSelectedStrengths] = useState([]);
   const strengths = [
     "Collaboration",
     "Communication",

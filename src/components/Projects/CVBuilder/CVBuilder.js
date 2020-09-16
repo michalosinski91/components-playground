@@ -7,7 +7,7 @@ import CVBuilderMain from "./CVBuilderMain/CVBuilderMain";
 import CVBuilderAside from "./CVBuilderAside/CVBuilderAside";
 
 export function CVBuilder({ contactDetails }) {
-  const [activeSection, setActiveSection] = useState(4);
+  const [activeSection, setActiveSection] = useState(2);
   const [progress, setProgress] = useState(0);
 
   const prevActiveSectionRef = useRef();
