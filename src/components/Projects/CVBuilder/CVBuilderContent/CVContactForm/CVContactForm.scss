@@ -18,6 +18,7 @@
       font-weight: 600;
       text-transform: uppercase;
       padding: 0 0.3rem;
+      z-index: 5;
 
       background: linear-gradient(
         180deg,
@@ -40,6 +41,35 @@
 
     &::placeholder {
       color: rgb(135, 135, 135);
+    }
+
+    &--valid {
+      border: 1px solid #20cf15;
+
+      & + span {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        //font-size: 1.1rem;
+        //font-weight: 500;
+        color: #20cf15;
+        background-color: transparent;
+      }
+    }
+
+    &--invalid {
+      border: 1px solid rgb(255, 19, 19);
+
+      & + span {
+        position: absolute;
+        bottom: -2px;
+        left: 1rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: rgb(255, 19, 19);
+        background-color: transparent;
+      }
     }
   }
 }

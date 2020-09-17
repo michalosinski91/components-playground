@@ -1,6 +1,6 @@
 const initialState = {
   contactDetails: {
-    firstName: "test",
+    firstName: "",
     lastName: "",
     city: "",
     postCode: "",
