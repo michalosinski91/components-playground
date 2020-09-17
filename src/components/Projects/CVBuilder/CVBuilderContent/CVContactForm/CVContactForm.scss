@@ -15,25 +15,15 @@
       top: 10px;
       left: 10px;
       font-size: 0.8rem;
+      font-weight: 600;
       text-transform: uppercase;
       padding: 0 0.3rem;
 
       background: linear-gradient(
         180deg,
         rgba(244, 199, 125, 0.2) 0%,
-        rgba(255, 255, 255, 1) 75%
+        rgba(255, 255, 255, 1) 80%
       );
-    }
-
-    & > label {
-      padding: none;
-      margin: none;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      position: absolute;
-      top: 6.5px;
-      left: 15px;
-      background-color: #fff;
     }
   }
 
@@ -41,7 +31,7 @@
     width: 280px;
     margin: 1.5rem 0;
     padding: 1rem;
-    border: 1px solid #bbb5b0;
+    border: 1px solid rgb(135, 135, 135);
     border-radius: 5px;
 
     &:focus {
@@ -49,7 +39,7 @@
     }
 
     &::placeholder {
-      color: #bbb5b0;
+      color: rgb(135, 135, 135);
     }
   }
 }

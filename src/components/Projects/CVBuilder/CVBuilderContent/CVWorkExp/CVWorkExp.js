@@ -5,7 +5,6 @@ export default function CVWorkExp() {
   const [experience, setExperience] = useState(0);
 
   function handleValueChange(target) {
-    console.log(target);
     setExperience(target.value);
   }
   return (
