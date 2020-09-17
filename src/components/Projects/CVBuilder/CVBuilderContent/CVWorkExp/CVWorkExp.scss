@@ -1,0 +1,138 @@
+.cv-work-exp {
+  margin-top: 5rem;
+  &__slider {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    /*   Chrome     */
+    &::-webkit-slider-runnable-track {
+      height: 1rem;
+      width: 100%;
+      background: #f39d1c;
+      border-radius: 5px;
+      border: 0.5px solid rgb(135, 135, 135);
+      cursor: pointer;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      border: 6px solid #fff;
+      border-radius: 50%;
+      height: 2rem;
+      width: 2rem;
+      margin-top: -5.6px;
+      cursor: pointer;
+    }
+
+    /*   Mozilla     */
+    &::-moz-range-track {
+      height: 1rem;
+      width: 100%;
+      background: #fff;
+      border-radius: 5px;
+      border: 0.5px solid rgb(135, 135, 135);
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    &::-moz-range-progress {
+      background: #f39d1c;
+      height: 1rem;
+    }
+
+    &::-moz-range-thumb {
+      appearance: none;
+      border: 5px solid #fff;
+      background: #f39d1c;
+      border-radius: 50%;
+      height: 1.2rem;
+      width: 1.2rem;
+      margin-top: -5.6px;
+      cursor: pointer;
+    }
+
+    /*   IE/Edge     */
+    &::-ms-thumb {
+      appearance: none;
+      border: 5px solid #fff;
+      background: #f39d1c;
+      border-radius: 50%;
+      height: 1.2rem;
+      width: 1.2rem;
+      margin-top: -5.6px;
+      cursor: pointer;
+    }
+
+    &::-ms-track {
+      height: 1rem;
+      width: 100%;
+      background: #fff;
+      border-radius: 5px;
+      border: 0.5px solid rgb(135, 135, 135);
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    &::-ms-fill {
+      background: #f39d1c;
+      height: 1rem;
+    }
+  }
+
+  & > datalist {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 0.6rem;
+
+    & > option {
+      text-align: center;
+      background: transparent;
+      color: #000;
+      font-size: 1.2rem;
+      font-weight: 500;
+      width: 1rem;
+    }
+  }
+}
+/*
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1.2rem;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid rgb(135, 135, 135);
+}
+*/
