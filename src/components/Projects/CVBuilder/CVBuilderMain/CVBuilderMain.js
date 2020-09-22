@@ -14,11 +14,16 @@ export default function CVBuilderMain({
   prevActiveSection,
   sections,
   contactDetails,
+  setContactDetails,
 }) {
   return (
     <div className="cv-builder-main">
       <CVBuilderHeader section={section} />
-      <CVBuilderContent section={section} contactDetails={contactDetails} />
+      <CVBuilderContent
+        section={section}
+        contactDetails={contactDetails}
+        setContactDetails={setContactDetails}
+      />
       <div className="cv-builder-main__nav">
         <CVBuilderBtn
           type="back"

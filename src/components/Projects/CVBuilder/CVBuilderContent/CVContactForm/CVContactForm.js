@@ -2,8 +2,17 @@ import React from "react";
 import "./CVContactForm.scss";
 import { useForm } from "react-hook-form";
 
-export default function CVContactForm({ contactDetails }) {
-  const { register, handleSubmit, errors, formState, trigger } = useForm();
+export default function CVContactForm({ contactDetails, setContactDetails }) {
+  const { register, handleSubmit, errors, formState, trigger } = useForm({
+    defaultValues: {
+      firstName: contactDetails.firstName,
+      lastName: contactDetails.lastName,
+      city: contactDetails.city,
+      postCode: contactDetails.postCode,
+      phone: contactDetails.phone,
+      email: contactDetails.email,
+    },
+  });
   const { touched } = formState;
 
   function checkField(fieldName) {
@@ -54,7 +63,7 @@ export default function CVContactForm({ contactDetails }) {
   }
 
   function onSubmit(data) {
-    console.log(data);
+    setContactDetails(data);
   }
 
   function onError(errors) {
@@ -117,17 +126,17 @@ export default function CVContactForm({ contactDetails }) {
           {getStatusMessage("city")}
         </div>
         <div className="cv-contact-form__form-group">
-          <legend>Postal Code</legend>
+          <legend>Post Code</legend>
           <input
-            className={getClass("postalCode")}
+            className={getClass("postCode")}
             type="text"
             placeholder="123"
-            name="postalCode"
+            name="postCode"
             onClick={({ target }) => checkField(target.name)}
             onChange={({ target }) => checkField(target.name)}
             ref={register({ required: true, minLength: 3, maxLength: 10 })}
           />
-          {getStatusMessage("postalCode")}
+          {getStatusMessage("postCode")}
         </div>
         <div className="cv-contact-form__form-group">
           <legend>Phone</legend>
@@ -160,7 +169,6 @@ export default function CVContactForm({ contactDetails }) {
           />
           {getStatusMessage("email")}
         </div>
-        <button type="submit">Submit</button>
       </form>
     </div>
   );

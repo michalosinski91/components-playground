@@ -6,7 +6,11 @@ import CVStrengths from "./CVStrengths/CVStrengths";
 import CVWorkExp from "./CVWorkExp/CVWorkExp";
 import CVWorkGap from "./CVWorkGap/CVWorkGap";
 
-export default function CVBuilderContent({ section, contactDetails }) {
+export default function CVBuilderContent({
+  section,
+  contactDetails,
+  setContactDetails,
+}) {
   const components = {
     CVContactForm,
     CVStrengths,
@@ -16,7 +20,12 @@ export default function CVBuilderContent({ section, contactDetails }) {
 
   function Comp(name) {
     const SpecificComponent = components[name];
-    return <SpecificComponent contactDetails={contactDetails} />;
+    return (
+      <SpecificComponent
+        contactDetails={contactDetails}
+        setContactDetails={setContactDetails}
+      />
+    );
   }
 
   return <div className="cv-builder-content">{Comp(section.component)}</div>;
