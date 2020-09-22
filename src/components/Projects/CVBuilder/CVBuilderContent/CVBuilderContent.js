@@ -8,6 +8,11 @@ import CVWorkGap from "./CVWorkGap/CVWorkGap";
 
 export default function CVBuilderContent({
   section,
+  activeSection,
+  setActiveSection,
+  progress,
+  setProgress,
+  sections,
   contactDetails,
   setContactDetails,
 }) {
@@ -24,6 +29,12 @@ export default function CVBuilderContent({
       <SpecificComponent
         contactDetails={contactDetails}
         setContactDetails={setContactDetails}
+        section={section}
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
+        progress={progress}
+        setProgress={setProgress}
+        sections={sections}
       />
     );
   }

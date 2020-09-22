@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./CVStrengths.scss";
 import CVStrengthsItem from "./CVStrengthsItem/CVStrengthsItem";
 
+import CVNavContainer from "../../CVNavContainer/CVNavContainer";
+import CVBuilderBtn from "../../CVBuilderBtn/CVBuilderBtn";
+
 export default function CVStrengths() {
   const [selectedStrengths, setSelectedStrengths] = useState([]);
   const strengths = [
@@ -43,14 +46,20 @@ export default function CVStrengths() {
 
   return (
     <div className="cv-strengths">
-      {strengths.map((strength) => (
-        <CVStrengthsItem
-          key={strength}
-          strength={strength}
-          handleSelectStrength={handleSelectStrength}
-          active={isStrengthActive(strength)}
-        />
-      ))}
+      <div className="cv-strengths__container">
+        {strengths.map((strength) => (
+          <CVStrengthsItem
+            key={strength}
+            strength={strength}
+            handleSelectStrength={handleSelectStrength}
+            active={isStrengthActive(strength)}
+          />
+        ))}
+      </div>
+      <CVNavContainer>
+        <CVBuilderBtn action="continue" />
+        <CVBuilderBtn action="back" />
+      </CVNavContainer>
     </div>
   );
 }

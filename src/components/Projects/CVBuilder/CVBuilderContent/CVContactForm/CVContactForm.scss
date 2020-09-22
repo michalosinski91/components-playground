@@ -1,4 +1,7 @@
 .cv-contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   &__form {
     width: 100%;
     display: flex;

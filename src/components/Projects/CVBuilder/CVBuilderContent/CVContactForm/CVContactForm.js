@@ -2,7 +2,19 @@ import React from "react";
 import "./CVContactForm.scss";
 import { useForm } from "react-hook-form";
 
-export default function CVContactForm({ contactDetails, setContactDetails }) {
+import CVNavContainer from "../../CVNavContainer/CVNavContainer";
+import CVBuilderBtn from "../../CVBuilderBtn/CVBuilderBtn";
+
+export default function CVContactForm({
+  contactDetails,
+  setContactDetails,
+  section,
+  activeSection,
+  setActiveSection,
+  progress,
+  setProgress,
+  sections,
+}) {
   const { register, handleSubmit, errors, formState, trigger } = useForm({
     defaultValues: {
       firstName: contactDetails.firstName,
@@ -64,10 +76,18 @@ export default function CVContactForm({ contactDetails, setContactDetails }) {
 
   function onSubmit(data) {
     setContactDetails(data);
+    nextSection(activeSection);
   }
 
   function onError(errors) {
     console.log(errors);
+  }
+
+  function nextSection(id) {
+    if (id < sections.length) {
+      setProgress(progress + section.value);
+      setActiveSection(id + 1);
+    }
   }
 
   return (
@@ -169,6 +189,9 @@ export default function CVContactForm({ contactDetails, setContactDetails }) {
           />
           {getStatusMessage("email")}
         </div>
+        <CVNavContainer>
+          <CVBuilderBtn action="continue" type="submit" />
+        </CVNavContainer>
       </form>
     </div>
   );

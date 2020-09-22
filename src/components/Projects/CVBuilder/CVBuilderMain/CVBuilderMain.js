@@ -11,7 +11,6 @@ export default function CVBuilderMain({
   setActiveSection,
   progress,
   setProgress,
-  prevActiveSection,
   sections,
   contactDetails,
   setContactDetails,
@@ -20,11 +19,21 @@ export default function CVBuilderMain({
     <div className="cv-builder-main">
       <CVBuilderHeader section={section} />
       <CVBuilderContent
-        section={section}
         contactDetails={contactDetails}
         setContactDetails={setContactDetails}
+        section={section}
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
+        progress={progress}
+        setProgress={setProgress}
+        sections={sections}
       />
-      <div className="cv-builder-main__nav">
+    </div>
+  );
+}
+
+/*
+<div className="cv-builder-main__nav">
         <CVBuilderBtn
           type="back"
           activeSection={activeSection}
@@ -46,6 +55,5 @@ export default function CVBuilderMain({
           sections={sections}
         />
       </div>
-    </div>
-  );
-}
+
+      */

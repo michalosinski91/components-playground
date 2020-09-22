@@ -2,13 +2,12 @@ import React from "react";
 import "./CVBuilderBtn.scss";
 
 export default function CVBuilderBtn({
-  type,
+  action,
   activeSection,
   setActiveSection,
   progress,
   setProgress,
   section,
-  prevActiveSection,
   sections,
 }) {
   function nextSection(id) {
@@ -28,11 +27,8 @@ export default function CVBuilderBtn({
 
   return (
     <>
-      {type == "continue" ? (
-        <button
-          className="cv-builer-button cv-builer-button--fill"
-          onClick={() => nextSection(activeSection)}
-        >
+      {action == "continue" ? (
+        <button className="cv-builer-button cv-builer-button--fill">
           Continue <i className="fas fa-long-arrow-alt-right"></i>
         </button>
       ) : (

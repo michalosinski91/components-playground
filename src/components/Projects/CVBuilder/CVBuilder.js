@@ -8,8 +8,8 @@ import CVBuilderMain from "./CVBuilderMain/CVBuilderMain";
 import CVBuilderAside from "./CVBuilderAside/CVBuilderAside";
 
 export function CVBuilder({ contactDetails, setContactDetails }) {
-  const [activeSection, setActiveSection] = useState(1);
-  const [progress, setProgress] = useState(0);
+  const [activeSection, setActiveSection] = useState(2);
+  const [progress, setProgress] = useState(35);
 
   const prevActiveSectionRef = useRef();
 
