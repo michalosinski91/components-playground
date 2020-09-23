@@ -7,3 +7,8 @@ export const setTopStrengths = (topStrengths) => ({
   type: "SET_TOP_STRENGTHS",
   payload: topStrengths,
 });
+
+export const setWorkExp = (workExp) => ({
+  type: "SET_WORK_EXP",
+  payload: workExp,
+});

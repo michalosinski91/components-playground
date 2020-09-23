@@ -11,12 +11,27 @@ export default function CVWorkExp({
   progress,
   setProgress,
   sections,
+  workExp,
+  setWorkExp,
 }) {
-  const [experience, setExperience] = useState(0);
+  const [experience, setExperience] = useState(workExp);
 
   function handleValueChange(target) {
     setExperience(target.value);
   }
+
+  function nextSection(id) {
+    if (id < sections.length) {
+      setProgress(progress + section.value);
+      setActiveSection(id + 1);
+    }
+  }
+
+  function handleContinue() {
+    setWorkExp(experience);
+    nextSection(activeSection);
+  }
+
   return (
     <div className="cv-work-exp">
       <div className="cv-work-exp__slider-container">

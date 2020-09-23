@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./CVStrengths.scss";
 import CVStrengthsItem from "./CVStrengthsItem/CVStrengthsItem";
 
@@ -30,12 +30,6 @@ export default function CVStrengths({
     "Motivation",
     "Critical thinking",
   ];
-
-  useEffect(() => {
-    if (topStrengths.length) {
-      console.log(topStrengths);
-    }
-  }, [topStrengths]);
 
   function isStrengthActive(strength) {
     return selectedStrengths.includes(strength);

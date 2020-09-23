@@ -8,6 +8,7 @@ const initialState = {
     email: "",
   },
   topStrengths: [],
+  workExp: 0,
 };
 
 const reducer = (state = initialState, action) => {
@@ -28,6 +29,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         topStrengths: [...action.payload],
+      };
+    case "SET_WORK_EXP":
+      return {
+        ...state,
+        workExp: action.payload,
       };
     default:
       return state;

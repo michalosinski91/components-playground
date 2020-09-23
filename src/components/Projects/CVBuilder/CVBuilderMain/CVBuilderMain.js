@@ -16,6 +16,8 @@ export default function CVBuilderMain({
   setContactDetails,
   topStrengths,
   setTopStrengths,
+  workExp,
+  setWorkExp,
 }) {
   return (
     <div className="cv-builder-main">
@@ -25,6 +27,8 @@ export default function CVBuilderMain({
         setContactDetails={setContactDetails}
         topStrengths={topStrengths}
         setTopStrengths={setTopStrengths}
+        workExp={workExp}
+        setWorkExp={setWorkExp}
         section={section}
         activeSection={activeSection}
         setActiveSection={setActiveSection}

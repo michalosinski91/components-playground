@@ -2,7 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 import "./CVBuilder.scss";
 
 import { connect } from "react-redux";
-import { setContactDetails, setTopStrengths } from "../../../store/actions";
+import {
+  setContactDetails,
+  setTopStrengths,
+  setWorkExp,
+} from "../../../store/actions";
 
 import CVBuilderMain from "./CVBuilderMain/CVBuilderMain";
 import CVBuilderAside from "./CVBuilderAside/CVBuilderAside";
@@ -12,9 +16,11 @@ export function CVBuilder({
   setContactDetails,
   topStrengths,
   setTopStrengths,
+  workExp,
+  setWorkExp,
 }) {
-  const [activeSection, setActiveSection] = useState(2);
-  const [progress, setProgress] = useState(35);
+  const [activeSection, setActiveSection] = useState(3);
+  const [progress, setProgress] = useState(50);
 
   const prevActiveSectionRef = useRef();
 
@@ -86,6 +92,8 @@ export function CVBuilder({
           setContactDetails={setContactDetails}
           topStrengths={topStrengths}
           setTopStrengths={setTopStrengths}
+          workExp={workExp}
+          setWorkExp={setWorkExp}
         />
         <CVBuilderAside
           sections={sections}
@@ -103,12 +111,14 @@ const mapStateToProps = (state) => {
   return {
     contactDetails: state.contactDetails,
     topStrengths: state.topStrengths,
+    workExp: state.workExp,
   };
 };
 
 const mapDispatchToProps = {
   setContactDetails,
   setTopStrengths,
+  setWorkExp,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CVBuilder);
