@@ -35,5 +35,9 @@
     background-color: rgb(175, 175, 175);
     color: #fff;
     cursor: not-allowed;
+
+    & i {
+      margin-left: 0.75rem;
+    }
   }
 }

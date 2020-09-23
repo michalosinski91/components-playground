@@ -2,4 +2,21 @@
   background-color: #fdfdfc5d;
   width: 700px;
   padding: 5rem;
+  z-index: 1;
+  position: relative;
+
+  &__complete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+
+    transition: width 1s ease;
+
+    &--hidden {
+      width: 0;
+    }
+  }
 }

@@ -50,6 +50,13 @@ export default function CVBuilderMain({
           />
         </motion.div>
       </AnimatePresence>
+      <div
+        className={
+          progress === 100
+            ? "cv-builder-main__complete"
+            : "cv-builder-main__complete cv-builder-main__complete--hidden"
+        }
+      ></div>
     </div>
   );
 }

@@ -47,10 +47,8 @@ export default function CVWorkGap({
   }
 
   function nextSection(id) {
-    if (id < sections.length) {
-      setProgress(progress + section.value);
-      setActiveSection(id + 1);
-    }
+    setActiveSection(id + 1);
+    setProgress(progress + section.value);
   }
 
   function prevSection(id) {
@@ -63,6 +61,7 @@ export default function CVWorkGap({
 
   function handleContinue() {
     setWorkGap(selectedReasons);
+    nextSection(activeSection);
   }
 
   function handleReturn() {

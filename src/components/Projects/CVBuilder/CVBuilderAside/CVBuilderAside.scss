@@ -3,12 +3,22 @@
   width: 300px;
   padding: 2rem 0;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  &__container {
+    width: 100%;
 
-  & h3 {
-    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+
+    transition: opacity 1.5s ease-in;
+
+    &--hidden {
+      opacity: 0;
+    }
+    & h3 {
+      margin-top: 5rem;
+    }
   }
 
   &__section-details {

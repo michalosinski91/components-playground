@@ -31,6 +31,7 @@ export default function CVBuilderContent({
 
   function Comp(name) {
     const SpecificComponent = components[name];
+
     return (
       <SpecificComponent
         contactDetails={contactDetails}
@@ -51,5 +52,9 @@ export default function CVBuilderContent({
     );
   }
 
-  return <div className="cv-builder-content">{Comp(section.component)}</div>;
+  return (
+    <div className="cv-builder-content">
+      {section ? Comp(section.component) : null}
+    </div>
+  );
 }
