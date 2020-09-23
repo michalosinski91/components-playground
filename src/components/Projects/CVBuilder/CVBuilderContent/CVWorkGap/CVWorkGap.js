@@ -88,6 +88,7 @@ export default function CVWorkGap({
           direction={"right"}
           text={"Continue"}
           action={handleContinue}
+          disabled={false}
         />
         <CVBuilderBtn
           fill={false}

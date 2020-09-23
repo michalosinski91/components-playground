@@ -1,13 +1,21 @@
 import React from "react";
 import "./CVBuilderBtn.scss";
 
-export default function CVBuilderBtn({ fill, direction, text, action }) {
+export default function CVBuilderBtn({
+  fill,
+  direction,
+  text,
+  action,
+  disabled,
+}) {
   return (
     <button
       className={
-        fill
-          ? "cv-builer-button cv-builer-button--fill"
-          : "cv-builer-button cv-builer-button--nofill"
+        disabled
+          ? "cv-builder-button cv-builder-button--disabled"
+          : fill
+          ? "cv-builder-button cv-builder-button--fill"
+          : "cv-builder-button cv-builder-button--nofill"
       }
       onClick={action ? () => action() : null}
     >

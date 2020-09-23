@@ -90,6 +90,30 @@ export default function CVContactForm({
     }
   }
 
+  function isEmpty(obj) {
+    for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function allFieldsTouched() {
+    const fieldNames = [
+      "firstName",
+      "lastName",
+      "city",
+      "postCode",
+      "phone",
+      "email",
+    ];
+    const touchedFields = fieldNames.filter(
+      (fieldName) => touched[fieldName] == true
+    );
+    return touchedFields.length == fieldNames.length ? true : false;
+  }
+
   return (
     <div className="cv-contact-form">
       <form
@@ -196,6 +220,7 @@ export default function CVContactForm({
             text={"Continue"}
             action={null}
             type="submit"
+            disabled={isEmpty(errors) && allFieldsTouched() ? false : true}
           />
         </CVNavContainer>
       </form>

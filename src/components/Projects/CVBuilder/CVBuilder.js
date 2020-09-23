@@ -22,7 +22,7 @@ export function CVBuilder({
   workGap,
   setWorkGap,
 }) {
-  const [activeSection, setActiveSection] = useState(4);
+  const [activeSection, setActiveSection] = useState(1);
   const [progress, setProgress] = useState(0);
 
   const prevActiveSectionRef = useRef();

@@ -95,6 +95,7 @@ export default function CVStrengths({
           direction={"right"}
           text={"Continue"}
           action={handleContinue}
+          disabled={selectedStrengths.length < 3}
         />
         <CVBuilderBtn
           fill={false}
