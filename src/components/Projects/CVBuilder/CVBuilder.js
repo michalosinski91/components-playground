@@ -6,6 +6,7 @@ import {
   setContactDetails,
   setTopStrengths,
   setWorkExp,
+  setWorkGap,
 } from "../../../store/actions";
 
 import CVBuilderMain from "./CVBuilderMain/CVBuilderMain";
@@ -18,9 +19,11 @@ export function CVBuilder({
   setTopStrengths,
   workExp,
   setWorkExp,
+  workGap,
+  setWorkGap,
 }) {
-  const [activeSection, setActiveSection] = useState(3);
-  const [progress, setProgress] = useState(50);
+  const [activeSection, setActiveSection] = useState(4);
+  const [progress, setProgress] = useState(80);
 
   const prevActiveSectionRef = useRef();
 
@@ -66,7 +69,7 @@ export function CVBuilder({
       shortName: "Gap",
       titlePrimary: "Why did you stop working?",
       titleSecondary:
-        "Choose from the following several reasons why you might have stpped working",
+        "Choose from the following several reasons why you might have stopped working",
       value: 20,
       component: "CVWorkGap",
     },
@@ -94,6 +97,8 @@ export function CVBuilder({
           setTopStrengths={setTopStrengths}
           workExp={workExp}
           setWorkExp={setWorkExp}
+          workGap={workGap}
+          setWorkGap={setWorkGap}
         />
         <CVBuilderAside
           sections={sections}
@@ -112,6 +117,7 @@ const mapStateToProps = (state) => {
     contactDetails: state.contactDetails,
     topStrengths: state.topStrengths,
     workExp: state.workExp,
+    workGap: state.workGap,
   };
 };
 
@@ -119,6 +125,7 @@ const mapDispatchToProps = {
   setContactDetails,
   setTopStrengths,
   setWorkExp,
+  setWorkGap,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CVBuilder);

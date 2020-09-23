@@ -9,6 +9,7 @@ const initialState = {
   },
   topStrengths: [],
   workExp: 0,
+  workGap: [],
 };
 
 const reducer = (state = initialState, action) => {
@@ -34,6 +35,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         workExp: action.payload,
+      };
+    case "SET_WORK_GAP":
+      return {
+        ...state,
+        workGap: [...action.payload],
       };
     default:
       return state;

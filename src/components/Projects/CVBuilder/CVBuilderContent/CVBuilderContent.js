@@ -19,6 +19,8 @@ export default function CVBuilderContent({
   setTopStrengths,
   workExp,
   setWorkExp,
+  workGap,
+  setWorkGap,
 }) {
   const components = {
     CVContactForm,
@@ -37,6 +39,8 @@ export default function CVBuilderContent({
         setTopStrengths={setTopStrengths}
         workExp={workExp}
         setWorkExp={setWorkExp}
+        workGap={workGap}
+        setWorkGap={setWorkGap}
         section={section}
         activeSection={activeSection}
         setActiveSection={setActiveSection}

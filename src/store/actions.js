@@ -12,3 +12,8 @@ export const setWorkExp = (workExp) => ({
   type: "SET_WORK_EXP",
   payload: workExp,
 });
+
+export const setWorkGap = (workGap) => ({
+  type: "SET_WORK_GAP",
+  payload: workGap,
+});

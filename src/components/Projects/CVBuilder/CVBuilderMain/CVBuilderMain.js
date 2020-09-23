@@ -18,6 +18,8 @@ export default function CVBuilderMain({
   setTopStrengths,
   workExp,
   setWorkExp,
+  workGap,
+  setWorkGap,
 }) {
   return (
     <div className="cv-builder-main">
@@ -29,6 +31,8 @@ export default function CVBuilderMain({
         setTopStrengths={setTopStrengths}
         workExp={workExp}
         setWorkExp={setWorkExp}
+        workGap={workGap}
+        setWorkGap={setWorkGap}
         section={section}
         activeSection={activeSection}
         setActiveSection={setActiveSection}
