@@ -17,7 +17,7 @@ export default function CVBuilderBtn({
           ? "cv-builder-button cv-builder-button--fill"
           : "cv-builder-button cv-builder-button--nofill"
       }
-      onClick={action ? () => action() : null}
+      onClick={disabled ? null : action ? () => action() : null}
     >
       {text}
       <i className={`fas fa-long-arrow-alt-${direction}`}></i>
