@@ -1,12 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./CVStrengths.scss";
 import CVStrengthsItem from "./CVStrengthsItem/CVStrengthsItem";
 
 import CVNavContainer from "../../CVNavContainer/CVNavContainer";
 import CVBuilderBtn from "../../CVBuilderBtn/CVBuilderBtn";
 
-export default function CVStrengths() {
-  const [selectedStrengths, setSelectedStrengths] = useState([]);
+export default function CVStrengths({
+  activeSection,
+  setActiveSection,
+  progress,
+  setProgress,
+  section,
+  sections,
+  topStrengths,
+  setTopStrengths,
+}) {
+  const [selectedStrengths, setSelectedStrengths] = useState(topStrengths);
   const strengths = [
     "Collaboration",
     "Communication",
@@ -21,6 +30,12 @@ export default function CVStrengths() {
     "Motivation",
     "Critical thinking",
   ];
+
+  useEffect(() => {
+    if (topStrengths.length) {
+      console.log(topStrengths);
+    }
+  }, [topStrengths]);
 
   function isStrengthActive(strength) {
     return selectedStrengths.includes(strength);
@@ -44,6 +59,18 @@ export default function CVStrengths() {
       : handleAddStrength(strength);
   }
 
+  function nextSection(id) {
+    if (id < sections.length) {
+      setProgress(progress + section.value);
+      setActiveSection(id + 1);
+    }
+  }
+
+  function handleContinue() {
+    setTopStrengths(selectedStrengths);
+    nextSection(activeSection);
+  }
+
   return (
     <div className="cv-strengths">
       <div className="cv-strengths__container">
@@ -57,8 +84,16 @@ export default function CVStrengths() {
         ))}
       </div>
       <CVNavContainer>
-        <CVBuilderBtn action="continue" />
-        <CVBuilderBtn action="back" />
+        <button onClick={() => handleContinue()}>Continue</button>
+        <CVBuilderBtn
+          action="back"
+          activeSection={activeSection}
+          setActiveSection={setActiveSection}
+          progress={progress}
+          setProgress={setProgress}
+          section={section}
+          sections={sections}
+        />
       </CVNavContainer>
     </div>
   );

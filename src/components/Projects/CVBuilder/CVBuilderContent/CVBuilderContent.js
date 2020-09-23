@@ -15,6 +15,8 @@ export default function CVBuilderContent({
   sections,
   contactDetails,
   setContactDetails,
+  topStrengths,
+  setTopStrengths,
 }) {
   const components = {
     CVContactForm,
@@ -29,6 +31,8 @@ export default function CVBuilderContent({
       <SpecificComponent
         contactDetails={contactDetails}
         setContactDetails={setContactDetails}
+        topStrengths={topStrengths}
+        setTopStrengths={setTopStrengths}
         section={section}
         activeSection={activeSection}
         setActiveSection={setActiveSection}

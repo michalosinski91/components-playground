@@ -7,6 +7,7 @@ const initialState = {
     phone: "",
     email: "",
   },
+  topStrengths: [],
 };
 
 const reducer = (state = initialState, action) => {
@@ -22,6 +23,11 @@ const reducer = (state = initialState, action) => {
           phone: action.payload.phone,
           email: action.payload.email,
         },
+      };
+    case "SET_TOP_STRENGTHS":
+      return {
+        ...state,
+        topStrengths: [...action.payload],
       };
     default:
       return state;
