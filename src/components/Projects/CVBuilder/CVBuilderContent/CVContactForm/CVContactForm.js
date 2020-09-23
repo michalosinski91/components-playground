@@ -190,7 +190,13 @@ export default function CVContactForm({
           {getStatusMessage("email")}
         </div>
         <CVNavContainer>
-          <CVBuilderBtn action="continue" type="submit" />
+          <CVBuilderBtn
+            fill={true}
+            direction={"right"}
+            text={"Continue"}
+            action={null}
+            type="submit"
+          />
         </CVNavContainer>
       </form>
     </div>

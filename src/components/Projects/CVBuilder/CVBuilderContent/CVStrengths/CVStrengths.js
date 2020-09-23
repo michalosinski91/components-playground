@@ -60,9 +60,21 @@ export default function CVStrengths({
     }
   }
 
+  function prevSection(id) {
+    if (id > 1) {
+      const prevSection = sections.filter((section) => section.id == id - 1)[0];
+      setActiveSection(id - 1);
+      setProgress(progress - prevSection.value);
+    }
+  }
+
   function handleContinue() {
     setTopStrengths(selectedStrengths);
     nextSection(activeSection);
+  }
+
+  function handleReturn() {
+    prevSection(activeSection);
   }
 
   return (
@@ -78,15 +90,17 @@ export default function CVStrengths({
         ))}
       </div>
       <CVNavContainer>
-        <button onClick={() => handleContinue()}>Continue</button>
         <CVBuilderBtn
-          action="back"
-          activeSection={activeSection}
-          setActiveSection={setActiveSection}
-          progress={progress}
-          setProgress={setProgress}
-          section={section}
-          sections={sections}
+          fill={true}
+          direction={"right"}
+          text={"Continue"}
+          action={handleContinue}
+        />
+        <CVBuilderBtn
+          fill={false}
+          direction={"left"}
+          text={"Back"}
+          action={handleReturn}
         />
       </CVNavContainer>
     </div>

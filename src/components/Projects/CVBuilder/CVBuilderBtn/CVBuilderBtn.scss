@@ -24,6 +24,7 @@
   &--nofill {
     background-color: transparent;
     color: #000;
+    flex-direction: row-reverse;
 
     & i {
       margin-right: 0.75rem;
