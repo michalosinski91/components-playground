@@ -90,7 +90,6 @@ export function CVBuilder({
     setActiveSection(1);
     setProgress(0);
     resetForm();
-    console.log(prevActiveSection);
   }
 
   return (

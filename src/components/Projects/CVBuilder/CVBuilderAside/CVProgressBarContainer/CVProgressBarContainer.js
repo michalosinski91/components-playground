@@ -15,6 +15,17 @@ export default function CVProgressBarContainer({
   const [renderCount, setRenderCount] = useState(0);
   const countupRef = useRef(null);
 
+  useEffect(() => {
+    setRenderCount(renderCount + 1);
+
+    if (prevActiveSection == 5) {
+      setStartVal(0);
+      setEndVal(0);
+    } else if (renderCount > 0) {
+      activeSection > prevActiveSection ? increase() : decrease();
+    }
+  }, [activeSection]);
+
   function increase() {
     const newStartVal = endVal;
     const newEndVal =
@@ -36,14 +47,6 @@ export default function CVProgressBarContainer({
     setStartVal(newStartVal);
     setEndVal(newEndVal);
   }
-
-  useEffect(() => {
-    setRenderCount(renderCount + 1);
-
-    if (renderCount > 0) {
-      activeSection > prevActiveSection ? increase() : decrease();
-    }
-  }, [activeSection]);
 
   return (
     <div className="cv-progress-bar-container">
