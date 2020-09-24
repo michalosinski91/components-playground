@@ -84,14 +84,14 @@ export default function CVWorkGap({
       <CVNavContainer>
         <CVBuilderBtn
           fill={true}
-          direction={"right"}
+          icon={"fas fa-long-arrow-alt-right"}
           text={"Complete"}
           action={handleContinue}
           disabled={false}
         />
         <CVBuilderBtn
           fill={false}
-          direction={"left"}
+          icon={"fas fa-long-arrow-alt-left"}
           text={"Back"}
           action={handleReturn}
         />

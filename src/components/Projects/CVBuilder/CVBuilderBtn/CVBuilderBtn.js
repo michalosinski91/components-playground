@@ -1,13 +1,7 @@
 import React from "react";
 import "./CVBuilderBtn.scss";
 
-export default function CVBuilderBtn({
-  fill,
-  direction,
-  text,
-  action,
-  disabled,
-}) {
+export default function CVBuilderBtn({ fill, icon, text, action, disabled }) {
   return (
     <button
       className={
@@ -20,7 +14,7 @@ export default function CVBuilderBtn({
       onClick={disabled ? null : action ? () => action() : null}
     >
       {text}
-      <i className={`fas fa-long-arrow-alt-${direction}`}></i>
+      {icon ? <i className={icon}></i> : null}
     </button>
   );
 }

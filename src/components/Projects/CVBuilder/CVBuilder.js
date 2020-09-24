@@ -130,7 +130,12 @@ export function CVBuilder({
         >
           <CVBuilderSpinner />
           <h2>Creating your letter...</h2>
-          <CVBuilderBtn text={"Reset"} fill={true} action={handleResetForm} />
+          <CVBuilderBtn
+            text={"Reset"}
+            fill={true}
+            action={handleResetForm}
+            icon={"fas fa-undo-alt"}
+          />
         </motion.div>
       ) : null}
     </div>

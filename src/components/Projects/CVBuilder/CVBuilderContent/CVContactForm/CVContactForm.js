@@ -218,7 +218,7 @@ export default function CVContactForm({
         <CVNavContainer>
           <CVBuilderBtn
             fill={true}
-            direction={"right"}
+            icon={"fas fa-long-arrow-alt-right"}
             text={"Continue"}
             action={null}
             type="submit"

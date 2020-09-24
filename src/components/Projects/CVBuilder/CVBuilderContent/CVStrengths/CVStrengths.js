@@ -92,14 +92,14 @@ export default function CVStrengths({
       <CVNavContainer>
         <CVBuilderBtn
           fill={true}
-          direction={"right"}
+          icon={"fas fa-long-arrow-alt-right"}
           text={"Continue"}
           action={handleContinue}
           disabled={selectedStrengths.length < 3}
         />
         <CVBuilderBtn
           fill={false}
-          direction={"left"}
+          icon={"fas fa-long-arrow-alt-left"}
           text={"Back"}
           action={handleReturn}
         />
