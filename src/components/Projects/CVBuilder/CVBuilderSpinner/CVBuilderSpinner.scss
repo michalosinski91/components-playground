@@ -1,0 +1,18 @@
+.cv-builder-spinner {
+  border: 1rem solid #f2e3d5;
+  border-top: 1rem solid #f39d1c;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

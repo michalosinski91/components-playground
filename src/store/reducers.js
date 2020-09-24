@@ -41,6 +41,10 @@ const reducer = (state = initialState, action) => {
         ...state,
         workGap: [...action.payload],
       };
+    case "RESET_FORM":
+      return {
+        ...initialState,
+      };
     default:
       return state;
   }

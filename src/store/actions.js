@@ -17,3 +17,7 @@ export const setWorkGap = (workGap) => ({
   type: "SET_WORK_GAP",
   payload: workGap,
 });
+
+export const resetForm = () => ({
+  type: "RESET_FORM",
+});

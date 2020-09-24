@@ -1,16 +1,21 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./CVBuilder.scss";
 
+import { motion } from "framer-motion";
+
 import { connect } from "react-redux";
 import {
   setContactDetails,
   setTopStrengths,
   setWorkExp,
   setWorkGap,
+  resetForm,
 } from "../../../store/actions";
 
 import CVBuilderMain from "./CVBuilderMain/CVBuilderMain";
 import CVBuilderAside from "./CVBuilderAside/CVBuilderAside";
+import CVBuilderSpinner from "./CVBuilderSpinner/CVBuilderSpinner";
+import CVBuilderBtn from "./CVBuilderBtn/CVBuilderBtn";
 
 export function CVBuilder({
   contactDetails,
@@ -21,15 +26,16 @@ export function CVBuilder({
   setWorkExp,
   workGap,
   setWorkGap,
+  resetForm,
 }) {
-  const [activeSection, setActiveSection] = useState(3);
-  const [progress, setProgress] = useState(50);
+  const [activeSection, setActiveSection] = useState(4);
+  const [progress, setProgress] = useState(80);
 
   const prevActiveSectionRef = useRef();
 
   useEffect(() => {
     prevActiveSectionRef.current = activeSection;
-  });
+  }, [activeSection]);
 
   const prevActiveSection = prevActiveSectionRef.current;
 
@@ -80,6 +86,13 @@ export function CVBuilder({
     return section[0];
   }
 
+  function handleResetForm() {
+    setActiveSection(1);
+    setProgress(0);
+    resetForm();
+    console.log(prevActiveSection);
+  }
+
   return (
     <div className="cv-builder">
       <div className="cv-builder__container">
@@ -108,6 +121,18 @@ export function CVBuilder({
           prevActiveSection={prevActiveSection}
         />
       </div>
+      {progress == 100 ? (
+        <motion.div
+          className="cv-builder__complete"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { duration: 2 } }}
+          exit={{ opacity: 0, transition: { duration: 2 } }}
+        >
+          <CVBuilderSpinner />
+          <h2>Creating your letter...</h2>
+          <CVBuilderBtn text={"Reset"} fill={true} action={handleResetForm} />
+        </motion.div>
+      ) : null}
     </div>
   );
 }
@@ -126,6 +151,7 @@ const mapDispatchToProps = {
   setTopStrengths,
   setWorkExp,
   setWorkGap,
+  resetForm,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CVBuilder);
