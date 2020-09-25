@@ -14,6 +14,7 @@ import ShopComponents from "../Projects/ShopComponents/ShopComponents";
 import FinancialDashboard from "../Projects/FinancialDashboard/FinancialDashboard";
 import FAQAccordion from "../Projects/FAQAccordion/FAQAccordion";
 import CVBuilder from "../Projects/CVBuilder/CVBuilder";
+import EstimatorPage from "../Projects/EstimatorPage/EstimatorPage";
 
 export default function ProjectsCanvas({ activeProject }) {
   const components = {
@@ -27,6 +28,7 @@ export default function ProjectsCanvas({ activeProject }) {
     FinancialDashboard: FinancialDashboard,
     FAQAccordion: FAQAccordion,
     CVBuilder: CVBuilder,
+    EstimatorPage: EstimatorPage,
   };
 
   function Comp(name) {
