@@ -7,7 +7,7 @@ export default function EstimatorSummaryItem({ item, removeService }) {
     <motion.div
       initial={{ height: 0 }}
       animate={{ height: 70 }}
-      exit={{ height: 0, opacity: 0 }}
+      exit={{ height: 0, opacity: 0.1, transition: { duration: 0.2 } }}
       className="estimator-summary__item"
     >
       <div className="estimator-summary__item-image">
