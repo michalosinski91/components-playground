@@ -1,0 +1,68 @@
+.recipe-subscribe {
+  width: 340px;
+  &__banner {
+    height: 180px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > h3 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    & > h5 {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    & > p {
+      text-align: center;
+      font-size: 1.3rem;
+      margin: 2rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & > button {
+      background-color: #f55951;
+      color: #fff;
+      font-size: 1.8rem;
+      border: 1px solid #edd2cb;
+      border-radius: 5px;
+      cursor: pointer;
+      height: 6rem;
+      margin: 0.5rem 0;
+    }
+  }
+
+  &__input {
+    font-size: 1.6rem;
+    height: 6rem;
+    padding: 2rem;
+    border: 1px solid #edd2cb;
+    border-radius: 5px;
+
+    &:focus,
+    :active {
+      outline: none;
+    }
+  }
+}

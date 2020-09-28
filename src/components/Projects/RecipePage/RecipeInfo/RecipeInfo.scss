@@ -1,0 +1,26 @@
+.recipe-info {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+
+    &:not(:last-of-type) {
+      margin-right: 2rem;
+    }
+
+    & > p {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    & > i {
+      margin-right: 0.75rem;
+    }
+  }
+}

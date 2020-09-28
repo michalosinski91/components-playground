@@ -17,8 +17,9 @@ export default function Projects() {
     "FAQAccordion",
     "CVBuilder",
     "EstimatorPage",
+    "RecipePage",
   ];
-  const [activeProject, setActiveProject] = useState("EstimatorPage");
+  const [activeProject, setActiveProject] = useState("RecipePage");
   return (
     <div className="projects" key="projects">
       <ProjectsSidebar

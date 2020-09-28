@@ -1,0 +1,14 @@
+.recipe-page-container {
+  background-color: #fff;
+  color: #111127;
+  margin: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 0 rgba(245, 89, 81, 0.2);
+  overflow: hidden;
+  max-width: 650px;
+
+  &--red {
+    background-color: #f55951;
+    color: #fff;
+  }
+}

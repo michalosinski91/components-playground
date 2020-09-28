@@ -1,0 +1,22 @@
+//$color-primary: #f55951;
+//$color-secondary: #edd2cb;
+//$color-tertirary: #faf2f0;
+
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700;800&display=swap");
+
+.recipe-page {
+  font-family: "Mulish", sans-serif;
+  color: #111127;
+
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  max-width: 100%;
+  min-width: 400px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}

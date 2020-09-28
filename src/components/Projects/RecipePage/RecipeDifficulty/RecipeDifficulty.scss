@@ -1,0 +1,32 @@
+.recipe-difficulty {
+  padding: 2rem;
+
+  & > h4 {
+    font-size: 1.8rem;
+    font-weight: 800;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+
+  &__item {
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    background-color: #faf2f0;
+    border: 1px solid #edd2cb;
+    border-radius: 20px;
+
+    &:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+
+    &--active {
+      background-color: #f55951;
+      color: #fff;
+    }
+  }
+}
