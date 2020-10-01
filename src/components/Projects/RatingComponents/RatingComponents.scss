@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+.rating-components {
+  background-color: #f1faee;
+  padding: 5rem;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  max-width: 900px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.blue-text {
+  color: #6189ff;
+}

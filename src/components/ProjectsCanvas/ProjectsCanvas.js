@@ -16,6 +16,7 @@ import FAQAccordion from "../Projects/FAQAccordion/FAQAccordion";
 import CVBuilder from "../Projects/CVBuilder/CVBuilder";
 import EstimatorPage from "../Projects/EstimatorPage/EstimatorPage";
 import RecipePage from "../Projects/RecipePage/RecipePage";
+import RatingComponents from "../Projects/RatingComponents/RatingComponents";
 
 export default function ProjectsCanvas({ activeProject }) {
   const components = {
@@ -31,6 +32,7 @@ export default function ProjectsCanvas({ activeProject }) {
     CVBuilder: CVBuilder,
     EstimatorPage: EstimatorPage,
     RecipePage: RecipePage,
+    RatingComponents: RatingComponents,
   };
 
   function Comp(name) {

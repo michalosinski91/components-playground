@@ -18,8 +18,9 @@ export default function Projects() {
     "CVBuilder",
     "EstimatorPage",
     "RecipePage",
+    "RatingComponents",
   ];
-  const [activeProject, setActiveProject] = useState("RecipePage");
+  const [activeProject, setActiveProject] = useState("RatingComponents");
   return (
     <div className="projects" key="projects">
       <ProjectsSidebar

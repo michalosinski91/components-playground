@@ -1,0 +1,40 @@
+.rating-btn {
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 2rem 4rem;
+  margin: 2rem 0;
+  color: #fff;
+  cursor: pointer;
+
+  background: rgb(139, 205, 255);
+  background: linear-gradient(
+    135deg,
+    rgba(139, 205, 255, 1) 0%,
+    rgba(104, 136, 243, 1) 100%
+  );
+
+  transition: all 0.1s linear;
+
+  &:hover {
+    transform: translateY(1px);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.6);
+  }
+
+  &:active,
+  :focus {
+    outline: none;
+    box-shadow: none;
+    transform: translateY(2px);
+
+    background: rgb(104, 136, 243);
+    background: linear-gradient(
+      135deg,
+      rgb(110, 188, 248) 0%,
+      rgb(56, 98, 233) 100%
+    );
+  }
+}
