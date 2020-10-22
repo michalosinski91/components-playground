@@ -19,8 +19,9 @@ export default function Projects() {
     "EstimatorPage",
     "RecipePage",
     "RatingComponents",
+    "ProfileCards",
   ];
-  const [activeProject, setActiveProject] = useState("RatingComponents");
+  const [activeProject, setActiveProject] = useState("ProfileCards");
   return (
     <div className="projects" key="projects">
       <ProjectsSidebar

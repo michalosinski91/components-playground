@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700;800&display=swap");
+
+.profile-cards {
+  background-color: #f3f2f9;
+  padding: 5rem;
+  border-radius: 10px;
+  font-family: "Mulish", sans-serif;
+  max-width: 900px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}

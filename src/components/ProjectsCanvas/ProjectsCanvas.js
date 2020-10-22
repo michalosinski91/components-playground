@@ -17,22 +17,24 @@ import CVBuilder from "../Projects/CVBuilder/CVBuilder";
 import EstimatorPage from "../Projects/EstimatorPage/EstimatorPage";
 import RecipePage from "../Projects/RecipePage/RecipePage";
 import RatingComponents from "../Projects/RatingComponents/RatingComponents";
+import ProfileCards from "../Projects/ProfileCards/ProfileCards";
 
 export default function ProjectsCanvas({ activeProject }) {
   const components = {
-    Subscribe: Subscribe,
-    PricingCard: PricingCard,
-    NavigationCard: NavigationCard,
-    LoginCard: LoginCard,
-    BlogCards: BlogCards,
-    FeedbackComponents: FeedbackComponents,
-    ShopComponents: ShopComponents,
-    FinancialDashboard: FinancialDashboard,
-    FAQAccordion: FAQAccordion,
-    CVBuilder: CVBuilder,
-    EstimatorPage: EstimatorPage,
-    RecipePage: RecipePage,
-    RatingComponents: RatingComponents,
+    Subscribe,
+    PricingCard,
+    NavigationCard,
+    LoginCard,
+    BlogCards,
+    FeedbackComponents,
+    ShopComponents,
+    FinancialDashboard,
+    FAQAccordion,
+    CVBuilder,
+    EstimatorPage,
+    RecipePage,
+    RatingComponents,
+    ProfileCards,
   };
 
   function Comp(name) {

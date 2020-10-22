@@ -1,0 +1,76 @@
+.profile-card {
+  background-color: #fff;
+  margin: 2rem;
+  box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  &--follow {
+    width: 450px;
+  }
+
+  &--contact {
+    width: 540px;
+    padding: 3rem;
+  }
+
+  &--summary {
+    width: 770px;
+    padding: 5rem;
+  }
+
+  &__photo {
+    width: 126px;
+    height: 126px;
+    border-radius: 50%;
+  }
+
+  &__container {
+    display: flex;
+
+    &--vertical {
+      flex-direction: column;
+    }
+
+    &--horizontal {
+      flex-direction: row;
+    }
+
+    &--center {
+      align-items: center;
+    }
+
+    &--between {
+      justify-content: space-between;
+    }
+  }
+
+  &__btn {
+    width: 150px;
+    background-color: #141f64;
+    color: #fff;
+    border: 2px solid #141f64;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 7.5px;
+    padding: 1.5rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+    &--wide {
+      width: 200px;
+    }
+
+    &--no-fill {
+      background-color: transparent;
+      color: #141f64;
+      border-color: #9ca2cb;
+    }
+  }
+}
